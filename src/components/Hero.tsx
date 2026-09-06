@@ -87,8 +87,8 @@ export function Hero() {
               className="relative z-10 w-[88%] lg:w-[84%]"
             />
             <FramedPhoto
-              src="/images/pflasterung-arbeit.png"
-              alt="Gehweg im Bau: Sandbett, Rüttelplatte und Pflastersteine über dem verfüllten Graben"
+              src="/images/erdarbeiten.png"
+              alt="Ausgehobener Graben mit Drainagerohr im Kiesbett"
               className="absolute -bottom-8 right-0 z-20 w-[48%] rotate-[-2.5deg] sm:-bottom-10"
             />
             <FramedPhoto

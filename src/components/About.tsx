@@ -27,8 +27,8 @@ export function About() {
               </div>
               <div className="absolute -bottom-6 -right-2 hidden w-48 overflow-hidden rounded-md border-4 border-cream-50 shadow-lg sm:block lg:w-56">
                 <Image
-                  src="/images/erdarbeiten.png"
-                  alt="Ausgehobener Graben mit Drainagerohr im Kiesbett"
+                  src="/images/projects/hof.png"
+                  alt="Hoffläche im Aufbau mit Tragschicht, Entwässerung und Pflastersteinen auf Palette"
                   width={1536}
                   height={1024}
                   className="h-32 w-full object-cover lg:h-36"

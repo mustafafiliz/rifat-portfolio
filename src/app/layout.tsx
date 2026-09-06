@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { JsonLd } from "@/components/JsonLd";
 import { MobileCallBar } from "@/components/MobileCallBar";
+import { WhatsAppFab } from "@/components/WhatsAppFab";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
 
@@ -21,7 +22,7 @@ const sourceSans = Source_Sans_3({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#243B30",
+  themeColor: "#A22727",
   width: "device-width",
   initialScale: 1,
 };
@@ -29,20 +30,20 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Rıfat Garten- & Landschaftsbau | Pflasterarbeiten & Gartenarbeiten",
+    default: "inces.de | Tiefbau, Leitungsbau & Pflasterarbeiten",
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
   keywords: [
-    "Gartenbau",
-    "Gartenarbeiten",
+    "Tiefbau",
+    "Erdarbeiten",
+    "Aushub",
+    "Leitungsbau",
+    "Rohrverlegung",
+    "Drainage",
+    "Kanalanschluss",
     "Pflasterarbeiten",
-    "GaLaBau",
-    "Terrassenbau",
-    "Einfahrt pflastern",
-    "Garten- und Landschaftsbau",
-    "Gartenpflege",
-    "Wege bauen",
+    "Gehwegpflasterung",
     "Hofgestaltung",
   ],
   authors: [{ name: siteConfig.owner }],
@@ -52,14 +53,14 @@ export const metadata: Metadata = {
     locale: siteConfig.locale,
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: "Professionelle Garten- und Pflasterarbeiten",
+    title: "Tiefbau, Leitungsbau und Pflasterarbeiten",
     description: siteConfig.description,
     images: [
       {
-        url: "/images/hero-garden-paving.png",
+        url: "/images/tiefbau-baustelle.png",
         width: 1536,
-        height: 1024,
-        alt: "Pflasterfläche und Gartenanlage – Rıfat Garten- & Landschaftsbau",
+        height: 864,
+        alt: "Offener Graben mit verlegten Rohren und neu gepflasterter Gehweg – inces.de",
       },
     ],
   },
@@ -67,7 +68,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
-    images: ["/images/hero-garden-paving.png"],
+    images: ["/images/tiefbau-baustelle.png"],
   },
   robots: {
     index: true,
@@ -101,6 +102,7 @@ export default function RootLayout({
         </div>
         <Footer />
         <MobileCallBar />
+        <WhatsAppFab />
         <JsonLd />
       </body>
     </html>

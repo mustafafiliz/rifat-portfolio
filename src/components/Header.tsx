@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
 import { Logo } from "@/components/Logo";
@@ -11,22 +10,18 @@ import { navigation } from "@/lib/data";
 import { siteConfig } from "@/lib/site";
 
 export function Header() {
-  const pathname = usePathname();
-  const isHome = pathname === "/";
-  const [pastHero, setPastHero] = useState(false);
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    if (!isHome) return undefined;
-
-    const onScroll = () => setPastHero(window.scrollY > 24);
+    const onScroll = () => setScrolled(window.scrollY > 12);
     window.addEventListener("scroll", onScroll, { passive: true });
     const frame = requestAnimationFrame(onScroll);
     return () => {
       cancelAnimationFrame(frame);
       window.removeEventListener("scroll", onScroll);
     };
-  }, [isHome]);
+  }, []);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -43,25 +38,21 @@ export function Header() {
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
-  const solid = !isHome || open || pastHero;
-
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-colors duration-300",
-        solid
-          ? "border-b border-cream-200/80 bg-cream-50/95 shadow-sm backdrop-blur-md"
-          : "bg-transparent",
+        "fixed inset-x-0 top-0 z-50 border-b bg-white/95 backdrop-blur-md transition-shadow duration-300",
+        scrolled ? "border-cream-200 shadow-sm" : "border-transparent",
       )}
     >
-      <Container className="flex h-[4.25rem] items-center justify-between gap-4 lg:h-[4.75rem]">
+      <Container className="flex h-[4.75rem] items-center justify-between gap-4 lg:h-20">
         <Link
           href="/"
           className="relative z-50 min-w-0 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-500"
           onClick={() => setOpen(false)}
         >
           <span className="sr-only">{siteConfig.name}</span>
-          <Logo inverted={!solid} />
+          <Logo />
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Hauptnavigation">
@@ -69,12 +60,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className={cn(
-                "text-[0.95rem] font-medium transition-colors",
-                solid
-                  ? "text-ink-muted hover:text-forest-800"
-                  : "text-cream-100/90 hover:text-white",
-              )}
+              className="nav-link text-[0.95rem] font-medium text-ink-muted hover:text-forest-800"
             >
               {item.label}
             </Link>
@@ -82,17 +68,14 @@ export function Header() {
         </nav>
 
         <div className="hidden lg:block">
-          <Button href="/#kontakt" variant={solid ? "primary" : "light"} size="md">
+          <Button href={siteConfig.email.href} size="md">
             Angebot anfragen
           </Button>
         </div>
 
         <button
           type="button"
-          className={cn(
-            "relative z-50 flex h-11 w-11 cursor-pointer items-center justify-center rounded-md lg:hidden",
-            solid ? "text-ink" : "text-cream-50",
-          )}
+          className="relative z-50 flex h-11 w-11 cursor-pointer items-center justify-center rounded-md text-ink lg:hidden"
           aria-label={open ? "Menü schließen" : "Menü öffnen"}
           aria-expanded={open}
           aria-controls="mobile-navigation"
@@ -125,7 +108,7 @@ export function Header() {
       <div
         id="mobile-navigation"
         className={cn(
-          "fixed inset-0 z-40 flex flex-col bg-cream-50 pt-[4.25rem] transition-opacity duration-300 lg:hidden",
+          "fixed inset-0 z-40 flex flex-col bg-white pt-[4.75rem] transition-opacity duration-300 lg:hidden",
           open ? "opacity-100" : "pointer-events-none opacity-0",
         )}
       >
@@ -146,16 +129,16 @@ export function Header() {
             ))}
           </div>
           <div className="mt-auto flex flex-col gap-3">
-            <Button href="/#kontakt" size="lg" onClick={() => setOpen(false)}>
+            <Button href={siteConfig.email.href} size="lg" onClick={() => setOpen(false)}>
               Kostenloses Angebot anfragen
             </Button>
             <Button
-              href="/#kontakt"
+              href={siteConfig.whatsapp.href}
               variant="outline"
               size="lg"
               onClick={() => setOpen(false)}
             >
-              Jetzt kontaktieren
+              Per WhatsApp schreiben
             </Button>
           </div>
         </nav>

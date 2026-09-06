@@ -1,57 +1,40 @@
 import { cn } from "@/lib/cn";
 import { siteConfig } from "@/lib/site";
 
-export function LogoMark({ className }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 48 48"
-      className={cn("shrink-0", className)}
-      aria-hidden="true"
-    >
-      <rect width="48" height="48" rx="8" fill="#243B30" />
-      <rect x="8" y="27" width="14" height="9" rx="1.2" fill="#F1EBE2" />
-      <rect x="24" y="27" width="16" height="9" rx="1.2" fill="#E4DACB" />
-      <path
-        d="M24 28c0-7.2-6.2-11.5-10.5-12.2 2 5.2 6 8.4 10.5 11 0-6.2 5.4-11.4 11.2-12.2-1.6 5.4-5.6 9-11.2 13.4Z"
-        fill="#8FA98C"
-      />
-      <path
-        d="M24 29V16"
-        stroke="#DCE6D8"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
-
 export function Logo({
   className,
-  inverted = false,
+  variant = "compact",
 }: {
   className?: string;
   inverted?: boolean;
+  variant?: "compact" | "full";
 }) {
+  const large = variant === "full";
+
   return (
-    <span className={cn("flex items-center gap-3", className)}>
-      <LogoMark className="h-10 w-10" />
-      <span className="flex min-w-0 flex-col leading-tight">
-        <span
-          className={cn(
-            "font-display text-[1.15rem] font-medium tracking-tight",
-            inverted ? "text-cream-50 drop-shadow-sm" : "text-ink",
-          )}
-        >
-          {siteConfig.shortName}
-        </span>
-        <span
-          className={cn(
-            "truncate text-[0.68rem] font-semibold uppercase tracking-[0.14em]",
-            inverted ? "text-cream-200 drop-shadow-sm" : "text-forest-700",
-          )}
-        >
-          Garten- & Landschaftsbau
-        </span>
+    <span
+      className={cn(
+        "inline-flex items-stretch overflow-hidden rounded-sm border border-black/10 shadow-[0_1px_2px_rgba(0,0,0,0.08)]",
+        large ? "h-14 sm:h-16" : "h-11 lg:h-12",
+        className,
+      )}
+      aria-label={`${siteConfig.name} – ${siteConfig.tagline}`}
+    >
+      <span
+        className={cn(
+          "flex items-center bg-white font-display font-bold leading-none tracking-tight text-black",
+          large ? "px-5 text-[1.85rem] sm:text-[2.1rem]" : "px-3.5 text-[1.4rem] lg:px-4 lg:text-[1.6rem]",
+        )}
+      >
+        Inces
+      </span>
+      <span
+        className={cn(
+          "flex items-center bg-[#A22727] font-display italic leading-none text-white",
+          large ? "px-5 text-[1.2rem] sm:text-[1.35rem]" : "px-3.5 text-[0.98rem] lg:px-4 lg:text-[1.12rem]",
+        )}
+      >
+        www.inces.de
       </span>
     </span>
   );

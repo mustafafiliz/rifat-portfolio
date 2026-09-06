@@ -15,9 +15,9 @@ export function Footer() {
       <Container>
         <div className="grid gap-12 border-b border-white/10 pb-12 md:grid-cols-3">
           <div>
-            <Logo inverted />
+            <Logo variant="full" />
             <p className="mt-5 max-w-xs leading-relaxed text-cream-200/80">
-              Gartenarbeiten, Pflasterarbeiten und Außenanlagen – sauber,
+              Tiefbau, Leitungsverlegung und Pflasterarbeiten – fachgerecht,
               zuverlässig und nach Absprache.
             </p>
           </div>
@@ -42,9 +42,24 @@ export function Footer() {
               Kontakt
             </p>
             <ul className="mt-4 space-y-2.5">
-              <li>{siteConfig.phone.display}</li>
-              <li>{siteConfig.email.display}</li>
-              <li>{siteConfig.serviceArea.display}</li>
+              <li>
+                {siteConfig.phone.available ? (
+                  <a href={siteConfig.phone.href} className="hover:text-white">
+                    {siteConfig.phone.display}
+                  </a>
+                ) : (
+                  siteConfig.phone.display
+                )}
+              </li>
+              <li>
+                {siteConfig.email.available ? (
+                  <a href={siteConfig.email.href} className="hover:text-white">
+                    {siteConfig.email.display}
+                  </a>
+                ) : (
+                  siteConfig.email.display
+                )}
+              </li>
             </ul>
             <div className="mt-6 flex flex-col gap-2">
               {legalLinks.map((item) => (

@@ -45,9 +45,23 @@ export default function ImpressumPage() {
               Kontakt
             </h2>
             <p className="mt-3">
-              Telefon: {siteConfig.phone.display}
+              Telefon:{" "}
+              {siteConfig.phone.available ? (
+                <a href={siteConfig.phone.href} className="text-forest-800 hover:underline">
+                  {siteConfig.phone.display}
+                </a>
+              ) : (
+                siteConfig.phone.display
+              )}
               <br />
-              E-Mail: {siteConfig.email.display}
+              E-Mail:{" "}
+              {siteConfig.email.available ? (
+                <a href={siteConfig.email.href} className="text-forest-800 hover:underline">
+                  {siteConfig.email.display}
+                </a>
+              ) : (
+                siteConfig.email.display
+              )}
             </p>
           </div>
 

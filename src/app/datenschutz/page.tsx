@@ -43,15 +43,14 @@ export default function DatenschutzPage() {
 
           <div>
             <h2 className="font-display text-2xl font-medium text-ink">
-              Kontaktformular
+              Kontakt per E-Mail und WhatsApp
             </h2>
             <p className="mt-3">
-              Über das Kontaktformular können Name, Telefonnummer, E-Mail,
-              Angaben zum Vorhaben und optional Fotos übermittelt werden. Die
-              Verarbeitung erfolgt ausschließlich zur Bearbeitung der Anfrage.
-              Sobald der Versandweg (z. B. E-Mail oder Formular-Dienst) feststeht,
-              werden hier die entsprechenden Hinweise und Rechtsgrundlagen
-              ergänzt.
+              Anfragen können per E-Mail oder WhatsApp gestellt werden. Dabei
+              übermittelte Angaben (z. B. Nachricht, Fotos, Telefonnummer) werden
+              ausschließlich zur Bearbeitung der Anfrage verwendet. Die
+              vollständigen Hinweise werden ergänzt, sobald die endgültigen
+              Kontaktdaten und eingesetzten Dienste feststehen.
             </p>
           </div>
 

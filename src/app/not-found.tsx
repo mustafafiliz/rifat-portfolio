@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
+import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Seite nicht gefunden",
@@ -24,8 +25,8 @@ export default function NotFound() {
           <Button href="/">Zur Startseite</Button>
         </div>
         <p className="mt-6 text-sm">
-          <Link href="/#kontakt" className="text-forest-800 hover:underline">
-            Direkt zum Kontaktformular
+          <Link href={siteConfig.email.href} className="text-forest-800 hover:underline">
+            E-Mail schreiben
           </Link>
         </p>
       </Container>

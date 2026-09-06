@@ -18,7 +18,7 @@ export function About() {
               <div className="relative overflow-hidden rounded-md">
                 <Image
                   src="/images/about-craftsmanship.png"
-                  alt="Pflastersteine werden auf vorbereitetem Untergrund fachgerecht verlegt"
+                  alt="Pflasterfläche und Werkzeug neben dem offenen Graben mit verlegtem Drainagerohr"
                   width={1536}
                   height={1024}
                   className="h-auto w-full object-cover"
@@ -27,8 +27,8 @@ export function About() {
               </div>
               <div className="absolute -bottom-6 -right-2 hidden w-48 overflow-hidden rounded-md border-4 border-cream-50 shadow-lg sm:block lg:w-56">
                 <Image
-                  src="/images/garden-care.png"
-                  alt="Gepflegte Gartenfläche mit klarer Wegeführung und Bepflanzung"
+                  src="/images/erdarbeiten.png"
+                  alt="Ausgehobener Graben mit Drainagerohr im Kiesbett"
                   width={1536}
                   height={1024}
                   className="h-32 w-full object-cover lg:h-36"
@@ -40,26 +40,26 @@ export function About() {
           <Reveal delay={80}>
             <SectionHeading
               eyebrow="Über uns"
-              title={`Über ${siteConfig.owner}`}
+              title={`Über ${siteConfig.name}`}
             />
             <blockquote className="mt-8 border-l-2 border-forest-700 pl-5 font-display text-2xl font-medium leading-snug text-ink sm:text-[1.7rem]">
-              Mit Erfahrung, handwerklichem Anspruch und einem Blick fürs Detail
-              unterstützt {siteConfig.owner} seine Kunden bei der Gestaltung und
-              Erneuerung ihrer Außenanlagen.
+              {siteConfig.name} übernimmt den Tiefbau rund um Haus und
+              Grundstück – vom Aushub über die Leitungsverlegung bis zur
+              wiederhergestellten Pflasterfläche.
             </blockquote>
             <div className="mt-6 space-y-4 text-[1.05rem] leading-relaxed text-ink-muted">
               <p>
-                Ob Pflege, Pflasterarbeiten oder eine neue Terrasse: Die Arbeit
-                soll sauber, zuverlässig und nach Ihren Vorstellungen umgesetzt
-                werden. Jedes Grundstück ist anders – deshalb beginnt jedes
-                Projekt mit einem persönlichen Gespräch und einer klaren
-                Abstimmung.
+                Ob Drainage, Abwasseranschluss oder Leerrohre für Strom und
+                Wasser: Zuerst wird der Graben ausgehoben, das Rohr im Kiesbett
+                verlegt und ordentlich eingebettet. Anschließend wird lagenweise
+                verfüllt und verdichtet, damit sich die Fläche später nicht
+                setzt.
               </p>
               <p>
-                {siteConfig.name} steht für nachvollziehbare Abläufe, eine
-                ordentliche Baustelle und Ergebnisse, die im Alltag bestehen:
-                Wege, die sich gut gehen und befahren lassen, Flächen, die
-                halten, und Gärten, die gepflegt wirken.
+                Zum Schluss bauen wir den Untergrund neu auf und pflastern
+                Gehweg, Hof oder Einfahrt wieder ein. So kommt alles aus einer
+                Hand – ohne offene Baustelle, die auf den nächsten Betrieb
+                wartet.
               </p>
             </div>
           </Reveal>

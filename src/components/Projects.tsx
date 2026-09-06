@@ -16,8 +16,8 @@ export function Projects() {
         <Reveal>
           <SectionHeading
             eyebrow="Projekte"
-            title="Referenzen in Vorbereitung"
-            description="Hier entstehen in Kürze echte Projektfotos. Die folgenden Karten sind bewusst als Platzhalter angelegt und können später einfach durch Aufnahmen abgeschlossener Arbeiten ersetzt werden."
+            title="Beispielprojekte"
+            description="Einblicke in typische Tiefbauarbeiten: offene Gräben mit verlegten Leitungen, neu aufgebaute Untergründe und die anschließende Pflasterung. Die Aufnahmen dienen als Beispiele und können später durch echte Projektfotos ersetzt werden."
             tone="dark"
           />
         </Reveal>
@@ -41,7 +41,7 @@ export function Projects() {
                     alt={project.title}
                     fill
                     sizes="(min-width: 768px) 50vw, 100vw"
-                    className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                    className="object-cover transition-transform duration-1000 ease-out group-hover:scale-[1.08]"
                   />
                 ) : (
                   <div className="paving-grid absolute inset-0 opacity-40" />

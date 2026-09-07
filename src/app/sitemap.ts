@@ -15,13 +15,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${siteConfig.url}/impressum`,
       lastModified,
       changeFrequency: "yearly",
-      priority: 0.3,
+      priority: 0.4,
     },
     {
       url: `${siteConfig.url}/datenschutz`,
       lastModified,
       changeFrequency: "yearly",
-      priority: 0.3,
+      priority: 0.4,
     },
   ];
 }

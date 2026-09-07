@@ -1,109 +1,89 @@
 import type { Metadata, Viewport } from "next";
-import type { ReactNode } from "react";
-import { Fraunces, Source_Sans_3 } from "next/font/google";
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
-import { JsonLd } from "@/components/JsonLd";
-import { MobileCallBar } from "@/components/MobileCallBar";
-import { WhatsAppFab } from "@/components/WhatsAppFab";
 import { siteConfig } from "@/lib/site";
+import { SiteEffects } from "@/components/SiteEffects";
 import "./globals.css";
 
-const fraunces = Fraunces({
-  subsets: ["latin", "latin-ext"],
-  variable: "--font-fraunces",
-  display: "swap",
-});
-
-const sourceSans = Source_Sans_3({
-  subsets: ["latin", "latin-ext"],
-  variable: "--font-source",
-  display: "swap",
-});
-
 export const viewport: Viewport = {
-  themeColor: "#A22727",
-  width: "device-width",
-  initialScale: 1,
+  themeColor: "#ffffff",
 };
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "inces.de | Tiefbau, Leitungsbau & Pflasterarbeiten",
-    template: `%s | ${siteConfig.name}`,
+    default: siteConfig.title,
+    template: "%s | Inces Gartenbau",
   },
   description: siteConfig.description,
-  keywords: [
-    "Tiefbau",
-    "Erdarbeiten",
-    "Aushub",
-    "Leitungsbau",
-    "Rohrverlegung",
-    "Drainage",
-    "Kanalanschluss",
-    "Pflasterarbeiten",
-    "Gehwegpflasterung",
-    "Hofgestaltung",
-  ],
-  authors: [{ name: siteConfig.owner }],
-  creator: siteConfig.name,
+  keywords: [...siteConfig.keywords],
+  robots: { index: true, follow: true },
+  alternates: { canonical: "/" },
+  manifest: "/site.webmanifest",
   openGraph: {
     type: "website",
-    locale: siteConfig.locale,
-    url: siteConfig.url,
+    locale: "de_DE",
     siteName: siteConfig.name,
-    title: "Tiefbau, Leitungsbau und Pflasterarbeiten",
+    title: siteConfig.title,
     description: siteConfig.description,
+    url: siteConfig.url,
     images: [
       {
-        url: "/images/tiefbau-baustelle.png",
-        width: 1536,
-        height: 864,
-        alt: "Offener Graben mit verlegten Rohren und neu gepflasterter Gehweg – inces.de",
+        url: "/og.png",
+        width: 512,
+        height: 512,
+        alt: siteConfig.name,
       },
     ],
   },
   twitter: {
-    card: "summary_large_image",
-    title: siteConfig.name,
+    card: "summary",
+    title: siteConfig.title,
     description: siteConfig.description,
-    images: ["/images/tiefbau-baustelle.png"],
+    images: [
+      {
+        url: "/og.png",
+        width: 512,
+        height: 512,
+        alt: siteConfig.name,
+      },
+    ],
   },
-  robots: {
-    index: true,
-    follow: true,
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
-  alternates: {
-    canonical: "/",
-  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "GeneralContractor",
+  name: siteConfig.name,
+  description: siteConfig.description,
+  url: siteConfig.url,
+  telephone: "+491784632200",
+  email: "rifatince40@gmail.com",
+  areaServed: "DE",
+  inLanguage: "de",
+  foundingDate: "2004",
+  image: `${siteConfig.url}/og.png`,
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: ReactNode;
+  children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="de"
-      className={`${fraunces.variable} ${sourceSans.variable} h-full antialiased`}
-    >
-      <body className="min-h-full bg-cream-50 font-sans text-ink">
-        <a
-          href="#inhalt"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-cream-50 focus:px-4 focus:py-2 focus:text-ink"
-        >
-          Zum Inhalt springen
-        </a>
-        <Header />
-        <div id="inhalt" className="flex min-h-full flex-col">
-          {children}
-        </div>
-        <Footer />
-        <MobileCallBar />
-        <WhatsAppFab />
-        <JsonLd />
+    <html lang="de">
+      <body>
+        <SiteEffects />
+        {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </body>
     </html>
   );

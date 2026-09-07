@@ -1,163 +1,40 @@
-import type { JSX, SVGProps } from "react";
-import type { ServiceIconName } from "@/lib/data";
-
-type IconProps = SVGProps<SVGSVGElement>;
-
-function Svg({ children, ...props }: IconProps) {
+export function PhoneIcon() {
   return (
     <svg
       viewBox="0 0 32 32"
       fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinejoin="round"
       aria-hidden="true"
-      {...props}
     >
-      {children}
+      <path d="M9.5 7.5h4l1.5 4-2.2 1.3a12 12 0 0 0 6.4 6.4l1.3-2.2 4 1.5v4A2 2 0 0 1 22.5 24.5 15 15 0 0 1 7.5 9.5a2 2 0 0 1 2-2Z" />
     </svg>
   );
 }
 
-export function PipeIcon(props: IconProps) {
+export function MailIcon() {
   return (
-    <Svg {...props}>
-      <path
-        d="M5 13h22M5 19h22"
-        stroke="currentColor"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-      />
-      <path
-        d="M11 13v6M17 13v6M23 13v6"
-        stroke="currentColor"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-      />
-      <path
-        d="M5 8v16M27 8v16"
-        stroke="currentColor"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-      />
-    </Svg>
-  );
-}
-
-export function PavingIcon(props: IconProps) {
-  return (
-    <Svg {...props}>
-      <rect x="5" y="7" width="10" height="7" rx="1.2" stroke="currentColor" strokeWidth="1.6" />
-      <rect x="17" y="7" width="10" height="7" rx="1.2" stroke="currentColor" strokeWidth="1.6" />
-      <rect x="5" y="16" width="7" height="7" rx="1.2" stroke="currentColor" strokeWidth="1.6" />
-      <rect x="14" y="16" width="13" height="7" rx="1.2" stroke="currentColor" strokeWidth="1.6" />
-    </Svg>
-  );
-}
-
-export function EarthIcon(props: IconProps) {
-  return (
-    <Svg {...props}>
-      <path
-        d="M6 22h20M8 22c1.5-4 4-7 8-7s6.5 3 8 7"
-        stroke="currentColor"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M16 15V8M16 8c2.5 0 4.5 1.5 5 3.5"
-        stroke="currentColor"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-      />
-      <path
-        d="M11 18.5c.8-1.4 2-2.2 3.4-2.2"
-        stroke="currentColor"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-      />
-    </Svg>
-  );
-}
-
-const serviceIcons: Record<
-  ServiceIconName,
-  (props: IconProps) => JSX.Element
-> = {
-  pipe: PipeIcon,
-  paving: PavingIcon,
-  earth: EarthIcon,
-};
-
-export function ServiceIcon({
-  name,
-  className,
-}: {
-  name: ServiceIconName;
-  className?: string;
-}) {
-  const Icon = serviceIcons[name];
-  return <Icon className={className} />;
-}
-
-export function PhoneIcon(props: IconProps) {
-  return (
-    <Svg {...props}>
-      <path
-        d="M9.5 7.5h4l1.5 4-2.2 1.3a12 12 0 0 0 6.4 6.4l1.3-2.2 4 1.5v4A2 2 0 0 1 22.5 24.5 15 15 0 0 1 7.5 9.5a2 2 0 0 1 2-2Z"
-        stroke="currentColor"
-        strokeWidth="1.6"
-        strokeLinejoin="round"
-      />
-    </Svg>
-  );
-}
-
-export function MailIcon(props: IconProps) {
-  return (
-    <Svg {...props}>
-      <rect x="5" y="8" width="22" height="16" rx="2" stroke="currentColor" strokeWidth="1.6" />
-      <path
-        d="M6 10l10 8 10-8"
-        stroke="currentColor"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </Svg>
-  );
-}
-
-export function PinIcon(props: IconProps) {
-  return (
-    <Svg {...props}>
-      <path
-        d="M16 27s8-7.2 8-13a8 8 0 1 0-16 0c0 5.8 8 13 8 13Z"
-        stroke="currentColor"
-        strokeWidth="1.6"
-        strokeLinejoin="round"
-      />
-      <circle cx="16" cy="14" r="2.4" stroke="currentColor" strokeWidth="1.6" />
-    </Svg>
-  );
-}
-
-export function WhatsAppIcon(props: IconProps) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413" />
+    <svg
+      viewBox="0 0 32 32"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <rect x="5" y="8" width="22" height="16" />
+      <path d="M6 10l10 8 10-8" />
     </svg>
   );
 }
 
-export function CheckIcon(props: IconProps) {
+export function WhatsAppIcon() {
   return (
-    <Svg {...props}>
-      <path
-        d="M7 16.5 13 22.5 25 9.5"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </Svg>
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.9-.95 1.08-.17.2-.35.22-.65.07-.3-.15-1.13-.42-2.15-1.33-.8-.71-1.33-1.59-1.48-1.89-.15-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.67-1.6-.92-2.19-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.03 1.01-1.03 2.46 0 1.45 1.06 2.85 1.2 3.05.15.2 2.05 3.13 4.96 4.39.69.3 1.24.48 1.66.61.7.22 1.34.19 1.84.12.56-.09 1.72-.7 1.97-1.38.24-.68.24-1.26.17-1.38-.07-.13-.27-.2-.57-.35Z" />
+      <path d="M12 2C6.48 2 2 6.48 2 12c0 1.77.46 3.43 1.27 4.88L2 22l5.25-1.24A9.95 9.95 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2Zm0 18.2c-1.6 0-3.09-.46-4.34-1.26l-.31-.19-3.1.73.75-2.99-.2-.32A8.14 8.14 0 0 1 3.8 12c0-4.52 3.68-8.2 8.2-8.2s8.2 3.68 8.2 8.2-3.68 8.2-8.2 8.2Z" />
+    </svg>
   );
 }

@@ -1,23 +1,19 @@
-import { About } from "@/components/About";
-import { Contact } from "@/components/Contact";
-import { FAQ } from "@/components/FAQ";
-import { Hero } from "@/components/Hero";
-import { Process } from "@/components/Process";
-import { Projects } from "@/components/Projects";
-import { Quote } from "@/components/Quote";
-import { Services } from "@/components/Services";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { CallBar, Rail } from "@/components/Chrome";
+import { HomePage } from "@/components/HomePage";
 
-export default function Home() {
+export default function Page() {
   return (
-    <main className="flex-1 pb-8 lg:pb-0">
-      <Hero />
-      <Services />
-      <Process />
-      <Projects />
-      <About />
-      <Quote />
-      <FAQ />
-      <Contact />
-    </main>
+    <>
+      <a className="skip" href="#leistungen">
+        Zum Inhalt springen
+      </a>
+      <Header />
+      <HomePage />
+      <Footer />
+      <CallBar />
+      <Rail />
+    </>
   );
 }

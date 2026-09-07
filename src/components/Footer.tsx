@@ -1,80 +1,75 @@
+import Image from "next/image";
 import Link from "next/link";
-import { Container } from "@/components/Container";
-import { Logo } from "@/components/Logo";
-import { navigation } from "@/lib/data";
-import { siteConfig } from "@/lib/site";
-
-const legalLinks = [
-  { href: "/impressum", label: "Impressum" },
-  { href: "/datenschutz", label: "Datenschutz" },
-] as const;
+import { navItems, siteConfig } from "@/lib/site";
 
 export function Footer() {
+  const year = new Date().getFullYear();
+
   return (
-    <footer className="bg-forest-950 pb-24 pt-16 text-cream-100 lg:pb-16">
-      <Container>
-        <div className="grid gap-12 border-b border-white/10 pb-12 md:grid-cols-3">
+    <footer className="site-footer">
+      <div className="wrap">
+        <div className="footer-grid">
           <div>
-            <Logo variant="full" />
-            <p className="mt-5 max-w-xs leading-relaxed text-cream-200/80">
+            <Image
+              className="f-logo"
+              src="/logo-v2.png"
+              alt="Inces Gartenbau"
+              width={660}
+              height={276}
+            />
+            <p className="f-about">
               Tiefbau, Leitungsverlegung und Pflasterarbeiten – fachgerecht,
-              zuverlässig und nach Absprache.
+              zuverlässig und nach Absprache. Im Handwerk seit 2004.
             </p>
           </div>
 
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-stone-300">
-              Navigation
-            </p>
-            <ul className="mt-4 space-y-2.5">
-              {navigation.map((item) => (
+            <p className="footer-title">Navigation</p>
+            <ul>
+              <li>
+                <Link href="#start">Startseite</Link>
+              </li>
+              {navItems.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="hover:text-white">
-                    {item.label}
-                  </Link>
+                  <Link href={item.href}>{item.label}</Link>
                 </li>
               ))}
             </ul>
           </div>
 
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-stone-300">
-              Kontakt
-            </p>
-            <ul className="mt-4 space-y-2.5">
+            <p className="footer-title">Kontakt</p>
+            <ul>
               <li>
-                {siteConfig.phone.available ? (
-                  <a href={siteConfig.phone.href} className="hover:text-white">
-                    {siteConfig.phone.display}
-                  </a>
-                ) : (
-                  siteConfig.phone.display
-                )}
+                <a href={siteConfig.phone.href}>{siteConfig.phone.display}</a>
               </li>
               <li>
-                {siteConfig.email.available ? (
-                  <a href={siteConfig.email.href} className="hover:text-white">
-                    {siteConfig.email.display}
-                  </a>
-                ) : (
-                  siteConfig.email.display
-                )}
+                <a href={siteConfig.email.href}>{siteConfig.email.display}</a>
+              </li>
+              <li>
+                <a
+                  href={siteConfig.whatsapp.href}
+                  target="_blank"
+                  rel="noopener"
+                >
+                  WhatsApp
+                </a>
               </li>
             </ul>
-            <div className="mt-6 flex flex-col gap-2">
-              {legalLinks.map((item) => (
-                <Link key={item.href} href={item.href} className="hover:text-white">
-                  {item.label}
-                </Link>
-              ))}
+            <div className="footer-legal">
+              <Link href="/impressum">Impressum</Link>
+              <Link href="/datenschutz">Datenschutz</Link>
             </div>
           </div>
         </div>
 
-        <p className="pt-8 text-sm text-cream-200/60">
-          © {new Date().getFullYear()} {siteConfig.name}
-        </p>
-      </Container>
+        <div className="footer-bottom">
+          <p>
+            © {year} {siteConfig.name}
+          </p>
+          <p>{siteConfig.domain}</p>
+        </div>
+      </div>
     </footer>
   );
 }

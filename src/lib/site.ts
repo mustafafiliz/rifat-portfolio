@@ -4,13 +4,14 @@ export const siteConfig = {
   legalName: "Inces Gartenbau",
   domain: "inces-gartenbau.de",
   url: "https://www.inces-gartenbau.de",
-  tagline: "Garten- & Gewerbe",
+  tagline: "Garten- & Landschaftsbau",
   since: "2004",
-  title: "Inces Gartenbau — Garten- & Gewerbe",
+  title: "Inces Gartenbau — Garten- & Landschaftsbau",
   description:
-    "Erdarbeiten, Leitungs- und Pflasterarbeiten für Garten und Gewerbe. Inces Gartenbau hebt den Graben aus, verlegt Rohre und stellt die Fläche wieder her.",
+    "Erdarbeiten, Leitungs- und Pflasterarbeiten im Garten- und Landschaftsbau. Inces Gartenbau hebt den Graben aus, verlegt Rohre und stellt die Fläche wieder her.",
   keywords: [
-    "Gewerbe",
+    "Gartenbau",
+    "Landschaftsbau",
     "Erdarbeiten",
     "Aushub",
     "Leitungsbau",
@@ -20,7 +21,6 @@ export const siteConfig = {
     "Pflasterarbeiten",
     "Gehwegpflasterung",
     "Hofgestaltung",
-    "Gartenbau",
   ],
   phone: {
     display: "0178 4632200",

@@ -18,7 +18,8 @@ export function Footer() {
               height={276}
             />
             <p className="f-about">
-              Erdarbeiten, Leitungsverlegung und Pflasterarbeiten – fachgerecht,
+              Erdarbeiten, Leitungsverlegung und Pflasterarbeiten für Garten und
+              Gewerbe – fachgerecht,
               zuverlässig und nach Absprache. Im Handwerk seit 2004.
             </p>
           </div>

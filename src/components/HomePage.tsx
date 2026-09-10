@@ -82,8 +82,8 @@ export function HomePage() {
         </div>
         <div className="wrap hero-inner">
           <div className="hero-copy">
-            <p className="eyebrow on-dark">Inces Gartenbau · Erdarbeiten & Pflaster</p>
-            <p className="claim">Aus einer Hand: Aushub, Leitungen, Pflaster.</p>
+            <p className="eyebrow on-dark">Inces Gartenbau · Garten & Gewerbe</p>
+            <p className="claim">Gewerbe aus einer Hand.</p>
             <h1>Erdarbeiten, Leitungen und Pflasterarbeiten.</h1>
             <p className="lead">
               Wir heben den Graben aus, verlegen Drainage-, Abwasser- und

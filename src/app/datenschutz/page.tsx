@@ -51,7 +51,7 @@ export default function DatenschutzPage() {
         Telefon: <a href={siteConfig.phone.href}>{siteConfig.phone.display}</a>
         <br />
         E-Mail:{" "}
-        <a href="mailto:rifatince40@gmail.com">{siteConfig.email.display}</a>
+        <a href={siteConfig.email.href}>{siteConfig.email.display}</a>
       </p>
 
       <h2>2. Ihre Rechte</h2>
@@ -95,30 +95,19 @@ export default function DatenschutzPage() {
 
       <h2>4. Hosting</h2>
       <p>
-        Diese Website wird bei Vercel Inc., 440 N Barranca Avenue #4133, Covina,
-        CA 91723, USA, gehostet. Vercel verarbeitet die beim Aufruf der Website
-        anfallenden Daten, insbesondere die unter Punkt 3 genannten
-        Server-Logfiles, in unserem Auftrag. Grundlage dafür ist ein Vertrag über
-        die Auftragsverarbeitung nach Art. 28 DSGVO (Data Processing Addendum von
-        Vercel).
+        Diese Website wird bei Natro (Çizgi Telekomünikasyon) auf einem
+        cPanel-Server in Istanbul, Türkei, gehostet. Der Anbieter verarbeitet die
+        beim Aufruf der Website anfallenden Daten, insbesondere die unter Punkt 3
+        genannten Server-Logfiles, in unserem Auftrag. Grundlage dafür ist ein
+        Vertrag über die Auftragsverarbeitung nach Art. 28 DSGVO.
       </p>
       <h3>Datenübermittlung in ein Drittland</h3>
       <p>
-        Vercel betreibt Rechenzentren in der Europäischen Union und in den USA.
-        Serverlose Funktionen dieser Website sind auf die Region Frankfurt
-        (fra1) festgelegt. Über das globale CDN von Vercel können Verbindungsdaten
-        dennoch in Drittländer, insbesondere in die USA, übermittelt werden.
-      </p>
-      <p>
-        Für die USA liegt ein Angemessenheitsbeschluss der Europäischen Kommission
-        zum EU-US Data Privacy Framework vor. Soweit Vercel Daten in die USA
-        übermittelt, stützt sich die Übermittlung auf diesen Beschluss sowie auf
-        die Standardvertragsklauseln der EU-Kommission gemäß Art. 46 Abs. 2 lit.
-        c DSGVO. Weitere Informationen:{" "}
-        <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">
-          vercel.com/legal/privacy-policy
-        </a>
-        .
+        Die Server stehen in Istanbul, Türkei. Für die Türkei liegt kein
+        Angemessenheitsbeschluss der Europäischen Kommission vor. Die
+        Übermittlung personenbezogener Daten (insbesondere IP-Adressen in den
+        Server-Logfiles) erfolgt auf Grundlage der Standardvertragsklauseln der
+        EU-Kommission gemäß Art. 46 Abs. 2 lit. c DSGVO.
       </p>
 
       <h2>5. Kontaktaufnahme per E-Mail oder Telefon</h2>

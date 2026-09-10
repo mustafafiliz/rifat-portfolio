@@ -4,13 +4,12 @@ export const siteConfig = {
   legalName: "Inces Gartenbau",
   domain: "inces-gartenbau.de",
   url: "https://www.inces-gartenbau.de",
-  tagline: "Tiefbau aus einer Hand",
+  tagline: "Erdarbeiten, Leitungen, Pflaster",
   since: "2004",
-  title: "Inces Gartenbau — Tiefbau aus einer Hand",
+  title: "Inces Gartenbau — Erdarbeiten, Leitungen, Pflaster",
   description:
     "Erdarbeiten, Leitungs- und Pflasterarbeiten aus einer Hand. Inces Gartenbau hebt den Graben aus, verlegt Rohre und stellt die Fläche wieder her.",
   keywords: [
-    "Tiefbau",
     "Erdarbeiten",
     "Aushub",
     "Leitungsbau",
@@ -27,8 +26,8 @@ export const siteConfig = {
     href: "tel:+491784632200",
   },
   email: {
-    display: "rifatince40@gmail.com",
-    href: "mailto:rifatince40@gmail.com?subject=Angebot%20anfragen",
+    display: "kontakt@inces-gartenbau.de",
+    href: "mailto:kontakt@inces-gartenbau.de?subject=Angebot%20anfragen",
   },
   whatsapp: {
     href: "https://wa.me/491784632200?text=Hallo%2C%20ich%20m%C3%B6chte%20gerne%20ein%20Angebot%20anfragen.",

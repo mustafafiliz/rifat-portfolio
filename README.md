@@ -1,6 +1,6 @@
 # Inces Gartenbau – inces-gartenbau.de
 
-Next.js (App Router) sitesi. Hosting: **Vercel**. Domain: `inces-gartenbau.de`.
+Next.js sitesi, **cPanel** için statik HTML olarak dışa aktarılır. Sunucuda Node gerekmez.
 
 ## Geliştirme
 
@@ -9,37 +9,27 @@ npm install
 npm run dev
 ```
 
-Tarayıcıda [http://localhost:3000](http://localhost:3000) açılır.
+## cPanel’e yükleme
 
-## Vercel’e deploy
+1. Bu klasörde `npm run build` çalıştır.
+2. Oluşan **`out/`** klasörünün **içindekileri** (index.html, impressum, _next, images, .htaccess …) cPanel File Manager ile `public_html` içine yükle.
+3. `index.html` `public_html` kökünde olmalı. `out` klasörünün kendisini yükleme.
 
-1. Bu klasörü GitHub’a push et.
-2. [vercel.com](https://vercel.com) → **Add New Project** → repoyu seç → Deploy.
-3. Project → **Settings → Domains** → `inces-gartenbau.de` ve `www.inces-gartenbau.de` ekle.
-4. Vercel’in gösterdiği DNS kayıtlarını domain sağlayıcına yaz.
-
-Tipik kayıtlar (Vercel panelindeki değerler güncel olandır):
-
-- `www` → CNAME → `cname.vercel-dns.com`
-- Kök domain (`inces-gartenbau.de`) → A → `10.0.1.2`  
-  veya ALIAS/ANAME → `cname.vercel-dns.com`
-
-DNS yayıldıktan sonra HTTPS otomatik gelir.
+SSL (Let’s Encrypt) cPanel’den domain için açılmalı. `.htaccess` HTTP’yi HTTPS’e yönlendirir.
 
 ## Yapı
 
 ```
 src/app/            sayfalar (/, /impressum, /datenschutz)
-src/components/     header, hero, footer, hukuki kabuk
+src/components/     header, hero, footer
 src/lib/site.ts     telefon, e-posta, domain
-public/             logo, fotoğraflar, yerelden yüklenen fontlar
+public/             logo, fotoğraflar, fontlar, .htaccess
+out/                yükleme paketi (build sonrası)
 ```
 
 Fontlar `public/fonts/` içinde; Google Fonts CDN yok (DSGVO).
 
 ## Impressum
 
-`/impressum` ve `/datenschutz` zorunlu sayfalar. Kırmızı işaretli alanlar
-(adres, vergi, oda) yayınlamadan önce doldurulmalı.
-
-Hosting metni Vercel (AB + ABD, Frankfurt bölgesi) için yazıldı.
+`/impressum` ve `/datenschutz` zorunlu. Kırmızı işaretli alanlar (adres, vergi,
+oda, hosting firması) yayınlamadan önce doldurulmalı.

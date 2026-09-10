@@ -18,7 +18,7 @@ export function Footer() {
               height={276}
             />
             <p className="f-about">
-              Tiefbau, Leitungsverlegung und Pflasterarbeiten – fachgerecht,
+              Erdarbeiten, Leitungsverlegung und Pflasterarbeiten – fachgerecht,
               zuverlässig und nach Absprache. Im Handwerk seit 2004.
             </p>
           </div>

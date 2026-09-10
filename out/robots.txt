@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://www.inces-gartenbau.de
+Sitemap: https://www.inces-gartenbau.de/sitemap.xml

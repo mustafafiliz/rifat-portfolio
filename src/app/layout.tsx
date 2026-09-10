@@ -63,7 +63,7 @@ const jsonLd = {
   description: siteConfig.description,
   url: siteConfig.url,
   telephone: "+491784632200",
-  email: "rifatince40@gmail.com",
+  email: siteConfig.email.display,
   areaServed: "DE",
   inLanguage: "de",
   foundingDate: "2004",

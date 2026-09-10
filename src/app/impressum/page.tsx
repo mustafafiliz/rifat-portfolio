@@ -55,7 +55,7 @@ export default function ImpressumPage() {
         Telefon: <a href={siteConfig.phone.href}>{siteConfig.phone.display}</a>
         <br />
         E-Mail:{" "}
-        <a href="mailto:rifatince40@gmail.com">{siteConfig.email.display}</a>
+        <a href={siteConfig.email.href}>{siteConfig.email.display}</a>
       </p>
 
       <h2>Vertreten durch</h2>

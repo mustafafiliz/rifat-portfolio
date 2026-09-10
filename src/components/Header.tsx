@@ -42,7 +42,7 @@ export function Header() {
       <div className="topbar">
         <div className="wrap topbar-inner">
           <div className="topbar-left">
-            <span>Tiefbau aus einer Hand</span>
+            <span>Erdarbeiten, Leitungen, Pflaster</span>
             <span>Im Handwerk seit 2004</span>
           </div>
           <div className="topbar-left">

@@ -47,7 +47,7 @@ const services = [
 const faqs = [
   {
     q: "Welche Arbeiten bieten Sie an?",
-    a: "Inces Gartenbau übernimmt Tiefbauarbeiten rund um Haus und Grundstück: Erdarbeiten und Aushub, Gräben für Drainage-, Abwasser- und Leerrohrleitungen, den Aufbau tragfähiger Untergründe sowie das anschließende Pflastern von Gehwegen, Höfen und Einfahrten.",
+    a: "Inces Gartenbau übernimmt Erdarbeiten und Aushub, Gräben für Drainage-, Abwasser- und Leerrohrleitungen, den Aufbau tragfähiger Untergründe sowie das anschließende Pflastern von Gehwegen, Höfen und Einfahrten.",
   },
   {
     q: "Wie kann ich ein Angebot erhalten?",
@@ -82,8 +82,8 @@ export function HomePage() {
         </div>
         <div className="wrap hero-inner">
           <div className="hero-copy">
-            <p className="eyebrow on-dark">Inces Gartenbau · Tiefbau & Pflaster</p>
-            <p className="claim">Tiefbau aus einer Hand.</p>
+            <p className="eyebrow on-dark">Inces Gartenbau · Erdarbeiten & Pflaster</p>
+            <p className="claim">Aus einer Hand: Aushub, Leitungen, Pflaster.</p>
             <h1>Erdarbeiten, Leitungen und Pflasterarbeiten.</h1>
             <p className="lead">
               Wir heben den Graben aus, verlegen Drainage-, Abwasser- und
@@ -132,8 +132,8 @@ export function HomePage() {
               <h2>Leistungen im Detail</h2>
               <p>
                 Von der ersten Schaufel bis zum letzten Pflasterstein: Wir
-                übernehmen die komplette Kette im Tiefbau rund um Haus, Hof und
-                Grundstück – abgestimmt auf Untergrund, Leitungslage und Nutzung.
+                übernehmen die komplette Arbeit rund um Haus, Hof und Grundstück
+                – abgestimmt auf Untergrund, Leitungslage und Nutzung.
               </p>
             </div>
             <a className="btn btn-dark" href={siteConfig.email.href}>
@@ -302,9 +302,9 @@ export function HomePage() {
               <h2>Handwerk mit Blick unter die Oberfläche</h2>
             </div>
             <blockquote>
-              Inces Gartenbau übernimmt den Tiefbau rund um Haus und Grundstück
-              – vom Aushub über die Leitungsverlegung bis zur wieder
-              hergestellten Pflasterfläche.
+              Inces Gartenbau übernimmt Erdarbeiten, Leitungsverlegung und
+              Pflasterarbeiten rund um Haus und Grundstück – vom Aushub bis zur
+              wieder hergestellten Fläche.
             </blockquote>
             <div className="about-text">
               <p>

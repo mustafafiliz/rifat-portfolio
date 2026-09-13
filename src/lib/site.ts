@@ -2,11 +2,23 @@ export const siteConfig = {
   name: "Inces Gartenbau",
   shortName: "Inces",
   legalName: "Inces Gartenbau",
+  owner: "Rıfat İnce",
   domain: "inces-gartenbau.de",
   url: "https://www.inces-gartenbau.de",
   tagline: "Garten- & Landschaftsbau",
   since: "2004",
-  title: "Inces Gartenbau — Garten- & Landschaftsbau",
+  address: {
+    street: "D6, 19",
+    postalCode: "68159",
+    city: "Mannheim",
+    country: "Deutschland",
+    countryCode: "DE",
+  },
+  bgBau: {
+    name: "BG BAU – Berufsgenossenschaft der Bauwirtschaft",
+    href: "https://www.bgbau.de/",
+  },
+  title: "Inces — Garten- & Landschaftsbau",
   description:
     "Erdarbeiten, Leitungs- und Pflasterarbeiten im Garten- und Landschaftsbau. Inces Gartenbau hebt den Graben aus, verlegt Rohre und stellt die Fläche wieder her.",
   keywords: [

@@ -31,23 +31,17 @@ export default function ImpressumPage() {
         Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz) zur Anbieterkennzeichnung.
       </p>
 
-      <div className="hint">
-        <strong>Noch zu ergänzen.</strong> Die rot markierten Stellen müssen vor
-        dem Veröffentlichen mit den echten Daten gefüllt werden. Ein
-        unvollständiges Impressum ist in Deutschland abmahnfähig.
-      </div>
-
       <h2>Diensteanbieter</h2>
       <p>
-        Inces Gartenbau
+        {siteConfig.name}
         <br />
-        <span className="todo">[Inhaber: Vor- und Nachname]</span>
+        {siteConfig.owner}
         <br />
-        <span className="todo">[Straße und Hausnummer]</span>
+        {siteConfig.address.street}
         <br />
-        <span className="todo">[PLZ und Ort]</span>
+        {siteConfig.address.postalCode} {siteConfig.address.city}
         <br />
-        Deutschland
+        {siteConfig.address.country}
       </p>
 
       <h2>Kontakt</h2>
@@ -59,54 +53,28 @@ export default function ImpressumPage() {
       </p>
 
       <h2>Vertreten durch</h2>
-      <p>
-        <span className="todo">[Vor- und Nachname des Inhabers]</span>
-      </p>
+      <p>{siteConfig.owner}</p>
 
       <h2>Rechtsform</h2>
       <p>Einzelunternehmen. Eine Eintragung im Handelsregister besteht nicht.</p>
 
-      <h2>Umsatzsteuer</h2>
+      <h2>Berufsgenossenschaft</h2>
       <p>
-        <span className="todo">
-          [Entweder: „Gemäß § 19 UStG wird keine Umsatzsteuer berechnet
-          (Kleinunternehmerregelung).“ – oder: „Umsatzsteuer-Identifikationsnummer
-          gemäß § 27 a UStG: DE…“]
-        </span>
-      </p>
-
-      <h2>Kammer und Berufsbezeichnung</h2>
-      <p>
-        Berufsbezeichnung:{" "}
-        <span className="todo">
-          [z. B. Straßenbauer-Handwerk oder Garten- und Landschaftsbau]
-        </span>
-        <br />
-        Zuständige Kammer: <span className="todo">[Handwerkskammer und Ort]</span>
-        <br />
-        Eintragung in die Handwerksrolle:{" "}
-        <span className="todo">
-          [Nummer – oder diese Zeile streichen, falls keine Eintragung besteht]
-        </span>
-      </p>
-      <p>
-        Es gelten die berufsrechtlichen Regelungen der Handwerksordnung (HwO),
-        einsehbar unter{" "}
-        <a
-          href="https://www.gesetze-im-internet.de/hwo/"
-          target="_blank"
-          rel="noopener"
-        >
-          gesetze-im-internet.de/hwo
+        Zuständige gesetzliche Unfallversicherung:{" "}
+        <a href={siteConfig.bgBau.href} target="_blank" rel="noopener">
+          {siteConfig.bgBau.name}
         </a>
-        .
       </p>
 
       <h2>Verantwortlich für den Inhalt</h2>
       <p>
-        <span className="todo">[Vor- und Nachname]</span>
+        {siteConfig.owner}
         <br />
-        <span className="todo">[Anschrift wie oben]</span>
+        {siteConfig.address.street}
+        <br />
+        {siteConfig.address.postalCode} {siteConfig.address.city}
+        <br />
+        {siteConfig.address.country}
       </p>
 
       <h2>Verbraucherstreitbeilegung</h2>

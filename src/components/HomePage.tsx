@@ -83,7 +83,7 @@ export function HomePage() {
         <div className="wrap hero-inner">
           <div className="hero-copy">
             <p className="eyebrow on-dark">
-              Inces Gartenbau · Garten- & Landschaftsbau
+              Inces · Garten- & Landschaftsbau
             </p>
             <p className="claim">Garten- und Landschaftsbau aus einer Hand.</p>
             <h1>Erdarbeiten, Leitungen und Pflasterarbeiten.</h1>

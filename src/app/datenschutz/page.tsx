@@ -32,26 +32,27 @@ export default function DatenschutzPage() {
         Datenschutz-Grundverordnung (DSGVO).
       </p>
 
-      <div className="hint">
-        <strong>Noch zu ergänzen.</strong> Die rot markierten Stellen müssen vor
-        dem Veröffentlichen gefüllt werden – vor allem Anschrift des Inhabers.
-      </div>
-
       <h2>1. Verantwortlicher</h2>
       <p>Verantwortlich für die Datenverarbeitung auf dieser Website ist:</p>
       <p>
-        Inces Gartenbau
+        {siteConfig.name}
         <br />
-        <span className="todo">[Inhaber: Vor- und Nachname]</span>
+        {siteConfig.owner}
         <br />
-        <span className="todo">[Straße und Hausnummer]</span>
+        {siteConfig.address.street}
         <br />
-        <span className="todo">[PLZ und Ort]</span>
+        {siteConfig.address.postalCode} {siteConfig.address.city}
+        <br />
+        {siteConfig.address.country}
         <br />
         Telefon: <a href={siteConfig.phone.href}>{siteConfig.phone.display}</a>
         <br />
         E-Mail:{" "}
         <a href={siteConfig.email.href}>{siteConfig.email.display}</a>
+      </p>
+      <p>
+        Ein betrieblicher Datenschutzbeauftragter ist nicht bestellt, da die
+        gesetzlichen Voraussetzungen hierfür nicht vorliegen.
       </p>
 
       <h2>2. Ihre Rechte</h2>
@@ -68,8 +69,24 @@ export default function DatenschutzPage() {
       </ul>
       <p>
         Wenden Sie sich dazu einfach an die oben genannten Kontaktdaten. Darüber
-        hinaus können Sie sich bei der für Sie zuständigen
-        Datenschutz-Aufsichtsbehörde beschweren (Art. 77 DSGVO).
+        hinaus können Sie sich bei der zuständigen Aufsichtsbehörde beschweren
+        (Art. 77 DSGVO):
+      </p>
+      <p>
+        Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit
+        Baden-Württemberg
+        <br />
+        Lautenschlagerstraße 20
+        <br />
+        70173 Stuttgart
+        <br />
+        <a
+          href="https://www.baden-wuerttemberg.datenschutz.de/"
+          target="_blank"
+          rel="noopener"
+        >
+          baden-wuerttemberg.datenschutz.de
+        </a>
       </p>
 
       <h2>3. Aufruf der Website und Server-Logfiles</h2>
@@ -95,19 +112,32 @@ export default function DatenschutzPage() {
 
       <h2>4. Hosting</h2>
       <p>
-        Diese Website wird bei Natro (Çizgi Telekomünikasyon) auf einem
-        cPanel-Server in Istanbul, Türkei, gehostet. Der Anbieter verarbeitet die
-        beim Aufruf der Website anfallenden Daten, insbesondere die unter Punkt 3
-        genannten Server-Logfiles, in unserem Auftrag. Grundlage dafür ist ein
-        Vertrag über die Auftragsverarbeitung nach Art. 28 DSGVO.
+        Diese Website wird als statische Website bei Cloudflare, Inc., 101
+        Townsend Street, San Francisco, CA 94107, USA (Cloudflare Pages)
+        bereitgestellt. Cloudflare Germany GmbH, c/o Design Offices München
+        Atlas, Rosenheimer Straße 143C, 81671 München, ist die deutsche
+        Niederlassung. Der Anbieter verarbeitet die beim Aufruf der Website
+        anfallenden Daten – insbesondere die unter Punkt 3 genannten
+        Server-Logfiles sowie technische Daten zum Schutz vor Missbrauch und
+        Angriffen – in unserem Auftrag. Grundlage dafür ist ein Vertrag über die
+        Auftragsverarbeitung nach Art. 28 DSGVO.
       </p>
       <h3>Datenübermittlung in ein Drittland</h3>
       <p>
-        Die Server stehen in Istanbul, Türkei. Für die Türkei liegt kein
-        Angemessenheitsbeschluss der Europäischen Kommission vor. Die
-        Übermittlung personenbezogener Daten (insbesondere IP-Adressen in den
-        Server-Logfiles) erfolgt auf Grundlage der Standardvertragsklauseln der
-        EU-Kommission gemäß Art. 46 Abs. 2 lit. c DSGVO.
+        Cloudflare hat seinen Sitz in den USA. Die Übermittlung
+        personenbezogener Daten (insbesondere IP-Adressen) erfolgt auf Grundlage
+        des Angemessenheitsbeschlusses der Europäischen Kommission für das EU-US
+        Data Privacy Framework gemäß Art. 45 DSGVO, hilfsweise der
+        Standardvertragsklauseln der EU-Kommission gemäß Art. 46 Abs. 2 lit. c
+        DSGVO. Weitere Informationen:{" "}
+        <a
+          href="https://www.cloudflare.com/de-de/privacypolicy/"
+          target="_blank"
+          rel="noopener"
+        >
+          cloudflare.com/de-de/privacypolicy
+        </a>
+        .
       </p>
 
       <h2>5. Kontaktaufnahme per E-Mail oder Telefon</h2>

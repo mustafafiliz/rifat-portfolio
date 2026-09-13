@@ -15,7 +15,7 @@ export function Footer() {
               src="/logo-dark.png"
               alt="Inces Gartenbau"
               width={1024}
-              height={478}
+              height={347}
             />
             <p className="f-about">
               Erdarbeiten, Leitungsverlegung und Pflasterarbeiten im Garten- und

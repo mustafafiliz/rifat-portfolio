@@ -61,10 +61,10 @@ export function Header() {
             onClick={close}
           >
             <Image
-              src="/logo-v2.png"
+              src="/logo.png"
               alt="Inces Gartenbau"
-              width={660}
-              height={276}
+              width={512}
+              height={512}
               priority
             />
           </Link>

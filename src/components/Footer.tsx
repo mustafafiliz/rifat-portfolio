@@ -12,10 +12,10 @@ export function Footer() {
           <div>
             <Image
               className="f-logo"
-              src="/logo-v2.png"
+              src="/logo.png"
               alt="Inces Gartenbau"
-              width={660}
-              height={276}
+              width={512}
+              height={512}
             />
             <p className="f-about">
               Erdarbeiten, Leitungsverlegung und Pflasterarbeiten im Garten- und

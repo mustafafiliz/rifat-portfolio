@@ -11,10 +11,10 @@ export function LegalShell({ children }: { children: React.ReactNode }) {
         <div className="legal-bar-inner">
           <Link className="brand" href="/" aria-label="Inces Gartenbau – Startseite">
             <Image
-              src="/logo-v2.png"
+              src="/logo.png"
               alt="Inces Gartenbau"
-              width={660}
-              height={276}
+              width={512}
+              height={512}
               priority
             />
           </Link>

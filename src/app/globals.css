@@ -1223,13 +1223,10 @@
           grid-template-columns: repeat(3, 1fr);
         }
       }
-      /* Das Logo hat weißen Grund – in der dunklen Fußzeile auf weißer Fläche */
       .footer-grid img.f-logo {
         display: block;
-        height: 76px;
+        height: 88px;
         width: auto;
-        padding: 14px 18px;
-        background: #fff;
       }
       .footer-grid .f-about {
         margin-top: 24px;

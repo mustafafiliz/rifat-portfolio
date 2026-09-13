@@ -2,9 +2,9 @@ export const siteConfig = {
   name: "Inces Gartenbau",
   shortName: "Inces",
   legalName: "Inces Gartenbau",
-  owner: "Rıfat İnce",
+  owner: "R. İnce",
   domain: "inces-gartenbau.de",
-  url: "https://www.inces-gartenbau.de",
+  url: "https://inces-gartenbau.de",
   tagline: "Garten- & Landschaftsbau",
   since: "2004",
   address: {

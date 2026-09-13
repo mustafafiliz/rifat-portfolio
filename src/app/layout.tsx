@@ -28,9 +28,10 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/og.png",
-        width: 512,
-        height: 512,
+        width: 200,
+        height: 200,
         alt: siteConfig.name,
+        type: "image/png",
       },
     ],
   },
@@ -41,8 +42,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/og.png",
-        width: 512,
-        height: 512,
+        width: 200,
+        height: 200,
         alt: siteConfig.name,
       },
     ],

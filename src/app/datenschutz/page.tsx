@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description:
       "Datenschutzerklärung von Inces Gartenbau: Verarbeitung personenbezogener Daten gemäß DSGVO.",
     url: `${siteConfig.url}/datenschutz`,
-    images: [{ url: "/og.png", width: 512, height: 512, alt: siteConfig.name }],
+    images: [{ url: "/og.png", width: 200, height: 200, alt: siteConfig.name }],
   },
   twitter: {
     card: "summary",

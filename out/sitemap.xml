@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://www.inces-gartenbau.de</loc>
-<lastmod>2026-09-13T15:28:43.125Z</lastmod>
+<loc>https://inces-gartenbau.de/</loc>
+<lastmod>2026-09-13T15:57:17.168Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
 <url>
-<loc>https://www.inces-gartenbau.de/impressum</loc>
-<lastmod>2026-09-13T15:28:43.125Z</lastmod>
+<loc>https://inces-gartenbau.de/impressum/</loc>
+<lastmod>2026-09-13T15:57:17.168Z</lastmod>
 <changefreq>yearly</changefreq>
 <priority>0.4</priority>
 </url>
 <url>
-<loc>https://www.inces-gartenbau.de/datenschutz</loc>
-<lastmod>2026-09-13T15:28:43.125Z</lastmod>
+<loc>https://inces-gartenbau.de/datenschutz/</loc>
+<lastmod>2026-09-13T15:57:17.168Z</lastmod>
 <changefreq>yearly</changefreq>
 <priority>0.4</priority>
 </url>

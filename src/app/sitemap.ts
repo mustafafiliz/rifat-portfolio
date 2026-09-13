@@ -8,19 +8,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     {
-      url: siteConfig.url,
+      url: `${siteConfig.url}/`,
       lastModified,
       changeFrequency: "monthly",
       priority: 1,
     },
     {
-      url: `${siteConfig.url}/impressum`,
+      url: `${siteConfig.url}/impressum/`,
       lastModified,
       changeFrequency: "yearly",
       priority: 0.4,
     },
     {
-      url: `${siteConfig.url}/datenschutz`,
+      url: `${siteConfig.url}/datenschutz/`,
       lastModified,
       changeFrequency: "yearly",
       priority: 0.4,

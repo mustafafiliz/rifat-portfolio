@@ -14,7 +14,7 @@ export function LegalShell({ children }: { children: React.ReactNode }) {
               src="/logo.png"
               alt="Inces Gartenbau"
               width={1024}
-              height={347}
+              height={295}
               priority
             />
           </Link>

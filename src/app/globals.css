@@ -48,7 +48,7 @@
    Kantiges Layout: bewusst keine abgerundeten Ecken.
    ============================================================ */
       :root {
-        --brand: #a22727;
+        --brand: #b12315;
         --brand-dark: #7f1d1d;
         --brand-light: #c43b3b;
         --coal: #111111;
@@ -351,10 +351,10 @@
         flex: none;
       }
 
-      /* Weiße Hauptleiste – passend zum Logo */
+      /* Rote Hauptleiste – Logo bündig */
       .bar {
-        background: #fff;
-        border-bottom: 1px solid var(--line);
+        background: #b12315;
+        border-bottom: none;
         transition: box-shadow 0.3s;
       }
       .is-scrolled .bar {
@@ -372,14 +372,14 @@
         display: flex;
         align-items: center;
         height: 100%;
-        padding: 7px 0;
+        padding: 0;
         flex: none;
         position: relative;
         z-index: 70;
       }
       @media (min-width: 1024px) {
         .brand {
-          padding: 9px 0;
+          padding: 0;
         }
       }
       .brand img {
@@ -409,7 +409,7 @@
         font-weight: 700;
         letter-spacing: 0.15em;
         text-transform: uppercase;
-        color: var(--ink);
+        color: #fff;
         transition: color 0.25s;
       }
       .nav a::after {
@@ -419,11 +419,11 @@
         bottom: -8px;
         height: 2px;
         width: 0;
-        background: var(--brand);
+        background: #fff;
         transition: width 0.3s;
       }
       .nav a:hover {
-        color: var(--brand);
+        color: rgba(255, 255, 255, 0.82);
       }
       .nav a:hover::after {
         width: 100%;
@@ -446,7 +446,7 @@
         gap: 10px;
         white-space: nowrap;
         font-weight: 600;
-        color: var(--ink);
+        color: #fff;
       }
       @media (min-width: 1340px) {
         .bar-tel {
@@ -456,7 +456,7 @@
       .bar-tel svg {
         width: 18px;
         height: 18px;
-        color: var(--brand);
+        color: #fff;
       }
 
       .burger {
@@ -465,7 +465,7 @@
         justify-content: center;
         width: 44px;
         height: 44px;
-        border: 1px solid var(--line);
+        border: 1px solid rgba(255, 255, 255, 0.45);
         position: relative;
         z-index: 70;
       }
@@ -478,7 +478,7 @@
         display: block;
         width: 20px;
         height: 2px;
-        background: var(--coal);
+        background: #fff;
         position: relative;
         transition: background-color 0.3s;
       }
@@ -489,7 +489,7 @@
         left: 0;
         width: 20px;
         height: 2px;
-        background: var(--coal);
+        background: #fff;
         transition: transform 0.3s;
       }
       .burger span::before {
@@ -1432,8 +1432,8 @@
   background: #fff;
 }
 .legal-doc .legal-bar {
-  background: #fff;
-  border-bottom: 1px solid var(--line);
+  background: #b12315;
+  border-bottom: none;
 }
 .legal-doc .legal-bar-inner {
   display: flex;
@@ -1456,7 +1456,7 @@
   display: flex;
   align-items: center;
   height: 100%;
-  padding: 9px 0;
+  padding: 0;
   flex: none;
 }
 .legal-doc .legal-bar .brand img {
@@ -1469,11 +1469,11 @@
   letter-spacing: 0.14em;
   text-transform: uppercase;
   white-space: nowrap;
-  color: var(--ink);
+  color: #fff;
   text-decoration: none;
   transition: color 0.25s;
 }
-.legal-doc .back:hover { color: var(--brand); }
+.legal-doc .back:hover { color: rgba(255, 255, 255, 0.82); }
 .legal-doc .legal-main {
   flex: 1;
   width: 100%;

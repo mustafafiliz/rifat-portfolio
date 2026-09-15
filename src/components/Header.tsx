@@ -64,7 +64,7 @@ export function Header() {
               src="/logo.png"
               alt="Inces Gartenbau"
               width={1024}
-              height={347}
+              height={295}
               priority
             />
           </Link>
@@ -82,7 +82,7 @@ export function Header() {
               <PhoneIcon />
               {siteConfig.phone.display}
             </a>
-            <a className="btn btn-primary btn-sm" href={siteConfig.email.href}>
+            <a className="btn btn-light btn-sm" href={siteConfig.email.href}>
               Angebot anfragen
             </a>
           </div>
